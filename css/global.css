@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --Dark-cyan: hsl(158, 36%, 37%);
+  --Cream: hsl(30, 38%, 92%);
+  --Very-dark-blue: hsl(212, 21%, 14%);
+  --Dark-grayish-blue: hsl(228, 12%, 48%);
+  --White: hsl(0, 0%, 100%);
+}
+
+body {
+  background: var(--Cream);
+  display: grid;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  background-color: var(--White);
+  width: 700px;
+  border-radius: 20px;
+}
+
+.card-image img {
+  border-radius: 20px 0 0 20px;
+}
+
+.card-content {
+  padding: 40px;
+}
+
+.subtitle {
+  font-weight: 700;
+  color: var(--Dark-grayish-blue);
+  margin-bottom: 20px;
+}
+
+.title {
+  font-family: "Fraunces";
+  font-size: 2.5rem;
+  color: var(--Very-dark-blue);
+  margin-bottom: 20px;
+}
+
+.text {
+  font-weight: 500;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  max-width: 25ch;
+  color: var(--Dark-grayish-blue);
+}
+
+.card-price {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.card-price-p {
+  font-size: 2rem;
+  color: var(--Dark-cyan);
+  font-weight: 700;
+  font-family: "Fraunces";
+}
+
+.card-price-p-2 {
+  color: var(--Dark-grayish-blue);
+  text-decoration: line-through;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 20px;
+  background-color: var(--Dark-cyan);
+  justify-content: center;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+.btn p {
+  color: var(--White);
+  font-weight: 700;
+}
+
+.btn:hover {
+  background-color: var(--Very-dark-blue);
+}
+
+@media (width <= 800px) {
+  .card {
+    margin-top: 20px;
+    grid-template-columns: 1fr;
+    /* padding: 0; */
+    width: 600px;
+  }
+
+  .card-image img {
+    border-radius: 20px 20px 0 0;
+  }
+
+  .btn {
+    padding: 20px 10px;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+  .text {
+    max-width: max-content;
+  }
+}
+
+@media (width <= 600px) {
+  .card {
+    width: 500px;
+  }
+}
