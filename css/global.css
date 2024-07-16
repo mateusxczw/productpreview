@@ -118,7 +118,7 @@ body {
 
 @media (width <= 600px) {
   .card {
-    width: 500px;
+    width: 300px;
   }
 }
 
